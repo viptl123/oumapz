@@ -1,0 +1,239 @@
+/* src/styles/Home.module.css */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the top */
+    overflow-y: auto;
+    padding-top: 20px; /* Adjust this value to move the title closer to the top */
+  }
+  .title {
+    font-size: 2rem; /* Set the size of the title */
+    color: #ffffff; /* Set the color of the title */
+    text-align: center; /* Centers the title text */
+    width: 100%; /* Ensures the title takes full width */
+  }
+  .sidebar {
+    width: 250px; /* Sidebar width */
+    background: #ffffff; /* Sidebar background color */
+    padding: 1rem; /* Padding inside the sidebar */
+    display: flex;
+    flex-direction: column; /* Stack the search and filter vertically */
+    color: black;
+  }
+  .mapContainer {
+    flex-grow: 1; /* Make the map container fill the remaining space */
+    display: flex;
+    flex-direction: column; /* To stack the title and map vertically */
+  }
+  .pageContainer {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+  }
+  .searchInput,
+.filterSelect,
+.nearbySelect {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #080000;
+  border-radius: 4px;
+} 
+.sidebarLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.sidebarSection {
+  margin-bottom: 20px;
+}
+.searchContainer {
+  position: relative;
+}
+.suggestions {
+  position: absolute;
+  top: 100%; /* directly below the input field */
+  left: 0;
+  right: 0;
+  background: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000; /* ensures it stacks on top of other content */
+}
+.suggestionItem {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+.suggestionItem:hover {
+  background-color: #f2f2f2;
+}
+.filterSelect {
+  /* Existing styles for the select element */
+  color: black; /* This will change the text color to black */
+  background: white; /* This will set the background to white */
+  -webkit-appearance: none; /* This will remove the default browser styling */
+  -moz-appearance: none;
+  appearance: none;
+}
+.filterSelect option {
+  color: black; /* This ensures the dropdown options text is also black */
+  background: white; /* This ensures the dropdown options have a white background */
+}
+/* Style for the dropdown arrow indicator */
+.filterSelect {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.7em top 50%;
+  background-size: 24px 24px;
+}
+.suggestionItem {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  color: black; /* Black text for suggestions */
+  background: white; /* White background for suggestions */
+}
+.loginForm {
+  /* Styles for the form */
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  width: 300px; /* Adjust as needed */
+  text-align: center;
+}
+.loginTitle {
+  color: black; /* Set the color of the title inside the form to black */
+  font-size: 2.5rem; /* Increase the size of the title */
+  margin-top: 0;
+  margin-bottom: 2rem; /* Add more space below the title */
+}
+.loginSubtitle {
+  margin-bottom: 30px;
+}
+.inputGroup {
+  position: relative;
+  margin-bottom: 20px;
+}
+.inputField {
+  width: 100%;
+  padding: 10px;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 10px; /* Adjust based on the exact position of password field */
+  background: none;
+  border: none;
+  color:#080000;
+  cursor: pointer;
+}
+.showPassword {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: none;
+  border: none;
+  color:#080000;
+  cursor: pointer;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #681010;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.loginButton:hover {
+  background-color: #753838;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Changed to center to start from center of the page */
+  height: 100vh;
+  background: #f232322c; /* Your desired background color */
+  padding-top: 0; /* Adjusted to zero, we'll use justify-content to center */
+}
+.mainTitle {
+  font-size: 4rem; /* Increased font size */
+  color: #ffffff; /* Color of the title */
+  margin-bottom: 1rem; /* Added more space below the title */
+  position: relative;
+  top: 10mm;
+  z-index: 1;  /* Ensures that the title is above the video */
+}
+.mapTitle {
+  font-size: 4rem; /* Example size, adjust as needed */
+  color: #ffffff; /* White color for the text */
+  margin-bottom: 1rem; /* Margin below the title */
+  position: relative;
+  top: 10mm; /* Adjust this value as needed */
+  z-index: 1;
+  border-top: 5px solid #4285F4; /* Blue border on top, change the color as needed */
+  width: 100%; /* Ensures the border spans the full width */
+}
+
+.loginForm {
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 300px; /* Adjust width as needed */
+  margin-top: 2rem; /* Added space above the login form */
+}
+.loginFormContainer {
+  background: rgb(25, 2, 2, 0);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(71, 3, 3, 0.1, 0);
+  position: relative;
+  z-index: 0;  /* Ensures that the login form is above the video */
+}
+.passwordInput {
+  position: relative;
+  width: 100%;
+}
+.addMarkerButton {
+  width: 10%;
+  padding: 10px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+
+} 
+.videoBackground {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.videoContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
