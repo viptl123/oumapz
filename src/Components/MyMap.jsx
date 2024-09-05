@@ -5,6 +5,7 @@ import { longitude, latitude } from './CoordinateHashMap';
 import { db } from '../../firebase';
 import { collection, doc, setDoc, getDoc} from 'firebase/firestore';
 
+ // changed anything that tempKey is in place of, so script.src and mapID 
 
 const MyMap = () => {
   const currentDate = new Date();
@@ -22,7 +23,7 @@ const MyMap = () => {
       const map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 35.20037131434744, lng: -97.44398323511265 },
         zoom: 13,
-        mapId: "dc3746cfb50352a8",
+        mapId: tempKey,
       });
 
       mapRef.current = map; // Store map instance in ref
@@ -111,13 +112,13 @@ const MyMap = () => {
         });
 
     }; // This closes the window.initMap function
-
+    const tempKey = ""
     // Check if the Google Maps script is already appended to prevent duplicates
     if (!document.querySelector('script[src^="https://maps.googleapis.com"]')) {
       const script = document.createElement('script');
       script.async = true;
       script.defer = true;
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDvKQYirZCBH07HDKlySghSajv4_69q9OM&callback=initMap`;
+      script.src = tempKey
       document.head.appendChild(script);
     }
 
