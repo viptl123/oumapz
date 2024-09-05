@@ -6,7 +6,7 @@ import { db } from '../../firebase';
 import { collection, doc, setDoc, getDoc} from 'firebase/firestore';
 
  // changed anything that tempKey is in place of, so script.src and mapID 
-
+const tempKey = ""
 const MyMap = () => {
   const currentDate = new Date();
 
@@ -112,7 +112,7 @@ const MyMap = () => {
         });
 
     }; // This closes the window.initMap function
-    const tempKey = ""
+   
     // Check if the Google Maps script is already appended to prevent duplicates
     if (!document.querySelector('script[src^="https://maps.googleapis.com"]')) {
       const script = document.createElement('script');
